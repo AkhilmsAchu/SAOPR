@@ -1,0 +1,97 @@
+ {% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<div>
+</div>
+
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        <h1>Add products</h1>
+        <div id="content-main">
+
+
+
+<form action="" method="post" id="products_form" novalidate><input type="hidden" >
+  {% csrf_token %}
+<div>
+ <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-name">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_name">Name:</label>
+                        
+                            <input type="text" name="name" class="vTextField" maxlength="200" required id="id_name">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-url">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_url">Url:</label>
+                        
+                            <input type="text" name="url" class="vTextField" maxlength="200" required id="id_url">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+<div class="submit-row">
+
+<input type="submit" value="Save" class="default" name="_save">
+
+
+<input type="submit" value="Save and add another" name="_addanother">
+
+
+</div>
+
+
+
+    <script type="text/javascript"
+            id="django-admin-form-add-constants"
+            src="/static1/admin/js/change_form.js"
+            
+                data-model-name="products"
+            >
+    </script>
+
+
+
+
+<script type="text/javascript"
+        id="django-admin-prepopulated-fields-constants"
+        src="/static1/admin/js/prepopulate_init.js"
+        data-prepopulated-fields="[]">
+</script>
+
+
+</div>
+</form></div>
+
+        
+        <br class="clear">
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+  {% endblock %}

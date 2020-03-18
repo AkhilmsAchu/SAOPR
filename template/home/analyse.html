@@ -1,0 +1,42 @@
+ {% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<div>
+</div>
+
+
+<table class="table">
+                            <thead class="thead-primary">
+                              <tr class="text-center">
+                                <th>&nbsp;</th>
+                                <th>Product name</th>
+                                <th>Url</th>
+                                <th></th>
+                                <th>&nbsp;</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            
+                            <tbody>
+                            
+                                {% for item in product %}
+                                <tr class="text-center">
+                                <th>&nbsp;</th>
+                                <th><h3>{{ item.name }}</h3></th>
+                                <th>{{ item.url }}</th>
+                                <th></th>
+                                <td class="quantity">
+                                    <a href="fetchproduct?id={{ item.id }}"><button class="btn" data-id="{{ item.id }}">Fetch Product</button></a>
+                              </td>
+                                
+                                <td class="total"><a href="deleteproduct?id={{ item.id }}"><button class="btn" data-id="{{ item.id }}">Delete Product</button></a></td>
+                               
+                              {% endfor %} 
+                            
+                            </tbody>
+
+                          </table>
+
+    <div id="footer"></div>
+</div>
+  {% endblock %}
